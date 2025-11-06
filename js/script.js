@@ -1,8 +1,9 @@
-// Animación de partículas de fondo (estrellas/luces)
+// Animación de partículas de fondo (estrellas/luces): crea y anima partículas que simulan estrellas o luces flotantes en el canvas de fondo
 const canvas = document.getElementById('particles-bg');
 const ctx = canvas.getContext('2d');
 let particles = [];
 
+// Función para redimensionar el canvas al tamaño de la ventana
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -10,6 +11,7 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
+// Función para crear partículas con posiciones, tamaños, velocidades y colores aleatorios
 function createParticles() {
   particles = [];
   const count = Math.floor(window.innerWidth / 8);
@@ -28,6 +30,7 @@ function createParticles() {
 createParticles();
 window.addEventListener('resize', createParticles);
 
+// Función para dibujar y animar las partículas en el canvas, con movimiento continuo y rebote en bordes
 function drawParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (const p of particles) {
@@ -51,7 +54,7 @@ function drawParticles() {
 }
 drawParticles();
 
-// Temporizador de oferta especial
+// Temporizador de oferta especial: cuenta regresiva que muestra el tiempo restante para una oferta, actualizándose cada segundo
 function startCountdown(duration, display) {
   let timer = duration, minutes, seconds;
   function update() {
@@ -75,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Scroll suave a CTA
+// Scroll suave a CTA: al hacer clic en el botón principal, hace scroll suave a la sección de oferta; al clic en oferta, abre WhatsApp
 const ctaMain = document.getElementById('cta-main');
 const ctaOffer = document.getElementById('cta-offer');
 if (ctaMain && ctaOffer) {
@@ -87,7 +90,7 @@ if (ctaMain && ctaOffer) {
   });
 }
 
-// Newsletter (simulado)
+// Newsletter (simulado): maneja el envío del formulario de newsletter, limpiando el input y cambiando el texto del botón temporalmente
 document.getElementById('newsletter-form').addEventListener('submit', function(e) {
   e.preventDefault();
   const input = this.querySelector('input[type="email"]');
