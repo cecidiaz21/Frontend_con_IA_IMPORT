@@ -1,6 +1,7 @@
-/* Tailwind CDN para prototipado rápido */
+/* Importación de Tailwind CSS desde CDN para prototipado rápido y utilidades de diseño */
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
 
+/* Variables CSS personalizadas para colores temáticos del sitio (oro, rojo, negro, neón) */
 :root {
   --gold: #FFD700;
   --red: #E10600;
@@ -8,6 +9,7 @@
   --neon: #ff003c;
 }
 
+/* Estilos globales del body: fuente oriental gamer, fondo negro, texto blanco, altura mínima de viewport */
 body {
   font-family: 'Zen Dots', 'Orbitron', Arial, sans-serif;
   background: #0a0a0a;
@@ -16,15 +18,18 @@ body {
   position: relative;
 }
 
+/* Clase para fuente oriental gamer con espaciado de letras */
 .font-oriental-gamer {
   font-family: 'Zen Dots', 'Orbitron', Arial, sans-serif;
   letter-spacing: 0.04em;
 }
 
+/* Clase para texto en color oro */
 .text-gold {
   color: var(--gold);
 }
 
+/* Estilos para tarjetas de beneficios: fondo semi-transparente, borde rojo, sombras neón, efectos hover */
 .benefit-card {
   background: rgba(30, 30, 30, 0.95);
   border: 2px solid var(--red);
@@ -38,12 +43,15 @@ body {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 0 32px 0 var(--neon), 0 0 16px 0 var(--gold);
 }
+
+/* Estilos para íconos en tarjetas de beneficios: tamaño fijo, sombra dorada */
 .benefit-icon {
   width: 48px;
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 8px var(--gold));
 }
 
+/* Estilos para botones neón rojos: fondo rojo, sombras neón, efectos hover con escala y brillo */
 .btn-neon-red {
   background: var(--red);
   color: #fff;
@@ -61,6 +69,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Estilos para botones neón dorados: fondo dorado, texto negro, sombras doradas, efectos hover */
 .btn-neon-gold {
   background: var(--gold);
   color: #0a0a0a;
@@ -78,6 +87,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Estilos para tarjetas de reseñas: fondo semi-transparente, borde dorado, layout flex para contenido */
 .review-card {
   background: rgba(20, 20, 20, 0.95);
   border: 2px solid var(--gold);
@@ -92,16 +102,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* Estilos para estrellas en reseñas: color dorado, tamaño grande */
 .stars {
   color: var(--gold);
   font-size: 1.3rem;
   margin: 0.5rem 0;
 }
+
+/* Estilos para nombre del reviewer: color gris, tamaño pequeño */
 .reviewer {
   color: #aaa;
   font-size: 0.95rem;
 }
 
+/* Estilos para tabla de comparación: fondo semi-transparente, bordes separados, sombras doradas */
 .comparison-table {
   border-collapse: separate;
   border-spacing: 0 0.5rem;
@@ -123,6 +138,7 @@ body {
   font-size: 1.05rem;
 }
 
+/* Estilos para input del newsletter: borde redondeado, fondo oscuro, foco cambia borde a rojo */
 .newsletter-input {
   border-radius: 9999px;
   padding: 0.5rem 1.2rem;
@@ -137,6 +153,7 @@ body {
   border: 2px solid var(--red);
 }
 
+/* Estilos para íconos sociales: tamaño fijo, sombra dorada, efectos hover con brillo y escala */
 .social-icon img {
   width: 32px;
   filter: drop-shadow(0 0 6px var(--gold));
@@ -147,7 +164,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Animaciones */
+/* Definición de animación de flotación para elementos que se mueven suavemente hacia arriba y abajo */
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-18px); }
@@ -157,7 +174,7 @@ body {
   animation: float 3.5s ease-in-out infinite;
 }
 
-/* Partículas de fondo */
+/* Estilos para el canvas de partículas de fondo: posicionamiento fijo, cubre toda la pantalla, sin interacción */
 #particles-bg {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
@@ -165,7 +182,7 @@ body {
   pointer-events: none;
 }
 
-/* Responsive */
+/* Media queries para diseño responsivo en pantallas pequeñas: ajusta padding y tamaños de fuente */
 @media (max-width: 768px) {
   .benefit-card, .review-card {
     padding: 1.2rem 0.7rem;
