@@ -90,6 +90,21 @@ if (ctaMain && ctaOffer) {
   });
 }
 
+// Array para guardar el listado de emails suscritos
+let subscribedEmails = new Set();
+
+// Función para validar email básico
+function isValidEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+// Cambia fondo al perder foco
+  const inputBlur = document.getElementById('inputBlur');
+  inputBlur.addEventListener('blur', function() {
+    this.style.backgroundColor = '';
+  });
+
 // Newsletter (simulado): maneja el envío del formulario de newsletter, limpiando el input y cambiando el texto del botón temporalmente
 document.getElementById('newsletter-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -99,4 +114,18 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
   setTimeout(() => {
     this.querySelector('button').textContent = 'Suscribirme';
   }, 2000);
+});
+
+// Evento input en el campo de email para agregar emails válidos al array
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('newsletter-form');
+  const input = form.querySelector('input[type="email"]');
+  input.addEventListener('input', () => {
+    const email = input.value.trim();
+    if (isValidEmail(email)) {
+      subscribedEmails.add(email);
+    }
+  });
+  console.log('Subscribed Emails:', subscribedEmails);
+
 });
