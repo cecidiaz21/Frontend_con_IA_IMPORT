@@ -16,7 +16,7 @@ Cómo ver el proyecto
 
 1) Hero / Encabezado
    - Nombre: imagenes/hero.png
-   - Markdown: `![Hero](imagenes/hero.png)`
+   - Markdown: (https://raw.githubusercontent.com/cecidiaz21/Frontend_con_IA_IMPORT/main/imagenes/hero.png)
 
 2) Sección Productos / Servicios
    - Nombre: imagenes/caracteristica-producto.png
