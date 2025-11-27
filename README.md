@@ -15,20 +15,17 @@ Cómo ver el proyecto
 -----------------------------
 
 1) Hero / Encabezado
-   - Nombre: imagenes/hero.png
-   - Markdown: (https://raw.githubusercontent.com/cecidiaz21/Frontend_con_IA_IMPORT/main/imagenes/hero.png)
    - <img width="757" height="426" alt="image" src="https://github.com/user-attachments/assets/06c9ddff-c452-439d-925a-f1a21ceb22da" />
      
 
 2) Sección Productos / Servicios
-   - Nombre: imagenes/caracteristica-producto.png
-   - Markdown: `![Productos](imagenes/caracteristica-producto.png)`
+   - <img width="1294" height="295" alt="image" src="https://github.com/user-attachments/assets/58ca492a-ab6e-4268-a372-c06dde052028" />
 
 3) Contacto (con validación)
-   - Nombre: imagenes/contacto.png
-   - Markdown: `![Formulario de contacto](imagenes/contacto.png)`
+   - <img width="953" height="80" alt="image" src="https://github.com/user-attachments/assets/8742366c-b2a5-444f-bf57-d3906066958f" />
+
 
 4) Vista Mobile (reducida)
-   - Nombre: imagenes/vsita-movil.png
-   - Markdown: `![Home - Mobile](imagenes/vsita-movil.png)`
+   - <img width="332" height="585" alt="image" src="https://github.com/user-attachments/assets/b9fcc477-b900-4546-b722-31f104895d0d" />
+
 
